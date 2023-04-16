@@ -5,6 +5,7 @@
 package pl.ds360.cudanawidelcu.repositories;
 
 import java.util.ArrayList;
+import pl.ds360.cudanawidelcu.entities.Category;
 import pl.ds360.cudanawidelcu.entities.Product;
 import pl.ds360.cudanawidelcu.entities.Recipe;
 import pl.ds360.cudanawidelcu.interfaces.RecipeRepository;
@@ -24,9 +25,9 @@ public class RecipeRepositoryImpl implements RecipeRepository {
     @Override
     public void init() {
         recipes = new ArrayList<>();
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Nalesniki", "Dobre nalesniki"));
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Spaghetti pycha", "Spaghetti bez miesa ale dobre"));
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Schabowe", "Schabowe jak u mamusi"));
+        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Nalesniki", "Dobre nalesniki", Category.BREAKFAST));
+        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Spaghetti pycha", "Spaghetti bez miesa ale dobre", Category.BREAKFAST));
+        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Schabowe", "Schabowe jak u mamusi", Category.BREAKFAST));
     }
 
     @Override

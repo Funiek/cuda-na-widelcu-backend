@@ -53,6 +53,30 @@ public class Recipe implements Serializable {
         this.countVotes = 0;
     }
     
+    public Recipe(int id, String name, String description, Category category) {
+        this.id = id;
+        this.nextProductId = -1;
+        this.name = name;
+        this.description = description;
+        this.products = new ArrayList<>();
+        this.rating = 0.0;
+        this.votes = new ArrayList<>();
+        this.countVotes = 0;
+        this.category = category;
+    }
+    
+    public Recipe(int id, String name, String description, Category category, ArrayList<Product> products) {
+        this.id = id;
+        this.nextProductId = -1;
+        this.name = name;
+        this.description = description;
+        this.products = products;
+        this.rating = 0.0;
+        this.votes = new ArrayList<>();
+        this.countVotes = 0;
+        this.category = category;
+    }
+    
     public Recipe() {
         this.nextProductId = -1;
         this.products = new ArrayList<>();

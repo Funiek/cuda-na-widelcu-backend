@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 import javax.jws.WebService;
 import pl.ds360.cudanawidelcu.entities.Category;
 import pl.ds360.cudanawidelcu.entities.Recipe;
-import pl.ds360.cudanawidelcu.interfaces.ImageService;
 import pl.ds360.cudanawidelcu.interfaces.RecipeRepository;
 import pl.ds360.cudanawidelcu.interfaces.RecipeService;
 import pl.ds360.cudanawidelcu.repositories.RecipeRepositoryImpl;
+import pl.ds360.cudanawidelcu.interfaces.FileService;
 
 /**
  *
@@ -21,11 +21,11 @@ import pl.ds360.cudanawidelcu.repositories.RecipeRepositoryImpl;
  */
 @WebService(serviceName = "RecipeService", endpointInterface = "pl.ds360.cudanawidelcu.interfaces.RecipeService")
 public class RecipeServiceImpl implements RecipeService {
-    ImageService imageService;
+    FileService imageService;
     RecipeRepository recipeRepository;
 
     public RecipeServiceImpl() {
-        this.imageService = new ImageServiceImpl();
+        this.imageService = new FileServiceImpl();
         this.recipeRepository = new RecipeRepositoryImpl();
         recipeRepository.init();
     }
@@ -119,6 +119,14 @@ public class RecipeServiceImpl implements RecipeService {
                 .stream()
                 .filter(r -> r.getCategory().equals(category))
                 .collect(Collectors.toList());
+
+//        ArrayList<Recipe> recipesByCategory = new ArrayList<>();
+//        
+//        for(Recipe recipe: recipeRepository.getRecipes()) {
+//            if(recipe.getCategory() == category) {
+//                recipesByCategory.add(recipe);
+//            }
+//        }
         
         return recipesByCategory;
     }
