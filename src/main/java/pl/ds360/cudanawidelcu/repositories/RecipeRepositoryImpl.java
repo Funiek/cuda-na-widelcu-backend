@@ -25,9 +25,31 @@ public class RecipeRepositoryImpl implements RecipeRepository {
     @Override
     public void init() {
         recipes = new ArrayList<>();
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Nalesniki", "Dobre nalesniki", Category.BREAKFAST));
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Spaghetti pycha", "Spaghetti bez miesa ale dobre", Category.BREAKFAST));
-        recipes.add(++this.nextRecipeId, new Recipe(this.nextRecipeId, "Schabowe", "Schabowe jak u mamusi", Category.BREAKFAST));
+        
+        Recipe nalesniki = new Recipe(++this.nextRecipeId, "Nalesniki", "Dobre nalesniki", Category.BREAKFAST);
+        
+        nalesniki.addProduct(new Product("mleko", "szklanka", 1.25));
+        nalesniki.addProduct(new Product("jajka", "ilosc", 2D));
+        nalesniki.addProduct(new Product("woda gazowana", "szklanka", 1D));
+        recipes.add(this.nextRecipeId, nalesniki);
+        
+        
+        Recipe spaghetti = new Recipe(++this.nextRecipeId, "Spaghetti pycha", "Spaghetti bez miesa ale dobre", Category.LUNCH);
+        
+        spaghetti.addProduct(new Product("makaron", "kg", 0.5));
+        spaghetti.addProduct(new Product("mieso mielone", "kg", 0.2));
+        spaghetti.addProduct(new Product("ser", "kg", 0.2));
+        recipes.add(this.nextRecipeId, spaghetti);
+        
+        Recipe schabowe = new Recipe(++this.nextRecipeId, "Schabowe", "Schabowe jak u mamusi", Category.BREAKFAST);
+        
+        schabowe.addProduct(new Product("piers z kurczaka", "ilosc", 2D));
+        recipes.add(this.nextRecipeId, schabowe);
+        
+        Recipe skry = new Recipe(++this.nextRecipeId, "Skyr", "Bialkowa moc", Category.DINNER);
+        
+        skry.addProduct(new Product("skyr", "ilosc", 1D));
+        recipes.add(this.nextRecipeId, skry);
     }
 
     @Override

@@ -8,4 +8,17 @@
             30
         </session-timeout>
     </session-config>
+    <security-constraint>
+        <display-name>WebServiceSecurity</display-name>
+
+        <web-resource-collection>
+            <web-resource-name>Authorized users only</web-resource-name>
+            <url-pattern>/RecipeService</url-pattern>
+            <http-method>POST</http-method>
+        </web-resource-collection>
+
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
 </web-app>

@@ -19,19 +19,12 @@ public class Product implements Serializable {
     private String name;
     private String measure;
     private Double qty;
-    private Category category;
     
     public Product(String name, String measure, Double qty) {
+        this.id = -1;
         this.name = name;
         this.measure = measure;
         this.qty = qty;
-    }
-    
-    public Product(String name, String measure, Double qty, Category category) {
-        this.name = name;
-        this.measure = measure;
-        this.qty = qty;
-        this.category = category;
     }
 
     public Product(int id, String name, String measure, Double qty) {
@@ -39,22 +32,6 @@ public class Product implements Serializable {
         this.name = name;
         this.measure = measure;
         this.qty = qty;
-    }
-
-    public Product(int id, String name, String measure, Double qty, Category category) {
-        this.id = id;
-        this.name = name;
-        this.measure = measure;
-        this.qty = qty;
-        this.category = category;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public int getId() {

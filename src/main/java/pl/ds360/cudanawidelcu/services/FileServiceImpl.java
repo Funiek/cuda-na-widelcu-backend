@@ -39,7 +39,7 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public byte[] downloadRecipeProductsPdf(String recipeName) throws IOException {
+    public byte[] downloadRecipeProductsPdf(String recipeName, String products) throws IOException {
         Path pdfPath = Paths.get("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + recipeName + ".pdf");
         File f = new File("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + recipeName + ".pdf");
         
@@ -52,7 +52,11 @@ public class FileServiceImpl implements FileService {
             PdfWriter writer = PdfWriter.getInstance(doc, fos);
             doc.open();
             
-            doc.add(new Paragraph(recipeName));
+            doc.add(new Paragraph(recipeName + " - składniki:"));
+            
+            for(String product: products.split(";")) {
+                doc.add(new Paragraph(product));
+            }
             
             doc.close();
             fos.close();

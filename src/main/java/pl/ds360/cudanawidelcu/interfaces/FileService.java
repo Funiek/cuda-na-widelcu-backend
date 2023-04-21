@@ -10,6 +10,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
+import pl.ds360.cudanawidelcu.entities.Recipe;
 
 /**
  *
@@ -23,5 +24,5 @@ public interface FileService {
     Image downloadImage(@WebParam(name = "recipeName") String recipeName);
     
     @WebMethod
-    byte[] downloadRecipeProductsPdf(@WebParam(name = "recipeName") String recipeName) throws IOException;
+    byte[] downloadRecipeProductsPdf(@WebParam(name = "recipeName") String recipeName, @WebParam(name = "products") String products) throws IOException;
 }

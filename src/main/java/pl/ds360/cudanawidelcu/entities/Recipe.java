@@ -171,7 +171,7 @@ public class Recipe implements Serializable {
     
     public void addProduct(Product product) {
         if(product.getId() == -1) {
-            product.setId(this.nextProductId++);
+            product.setId(++this.nextProductId);
         }
         
         products.add(product);
