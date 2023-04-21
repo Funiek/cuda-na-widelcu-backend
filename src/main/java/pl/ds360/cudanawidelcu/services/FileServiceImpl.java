@@ -40,14 +40,14 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public byte[] downloadRecipeProductsPdf(String recipeName, String products) throws IOException {
-        Path pdfPath = Paths.get("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + recipeName + ".pdf");
-        File f = new File("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + recipeName + ".pdf");
+        Path pdfPath = Paths.get("C:\\Users\\ZABA\\Documents\\widelecPDF\\" + recipeName + ".pdf");
+        File f = new File("C:\\Users\\ZABA\\Documents\\widelecPDF\\" + recipeName + ".pdf");
         
         if(f.exists())
             return Files.readAllBytes(pdfPath);
         
         try {
-            FileOutputStream fos = new FileOutputStream("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + recipeName + ".pdf");
+            FileOutputStream fos = new FileOutputStream("C:\\Users\\ZABA\\Documents\\widelecPDF\\" + recipeName + ".pdf");
             Document doc = new Document();
             PdfWriter writer = PdfWriter.getInstance(doc, fos);
             doc.open();

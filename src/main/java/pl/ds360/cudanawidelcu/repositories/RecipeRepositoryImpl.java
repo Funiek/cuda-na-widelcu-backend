@@ -34,7 +34,7 @@ public class RecipeRepositoryImpl implements RecipeRepository {
         recipes.add(this.nextRecipeId, nalesniki);
         
         
-        Recipe spaghetti = new Recipe(++this.nextRecipeId, "Spaghetti pycha", "Spaghetti bez miesa ale dobre", Category.LUNCH);
+        Recipe spaghetti = new Recipe(++this.nextRecipeId, "Spaghetti", "Spaghetti bez miesa ale dobre", Category.LUNCH);
         
         spaghetti.addProduct(new Product("makaron", "kg", 0.5));
         spaghetti.addProduct(new Product("mieso mielone", "kg", 0.2));
