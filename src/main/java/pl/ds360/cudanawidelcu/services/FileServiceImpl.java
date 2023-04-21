@@ -31,7 +31,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public Image downloadImage(String name) {
         try {
-            File image = new File("C:\\Users\\Krzysiek\\Documents\\CudaNaWidelcu\\" + name + ".jpeg");
+            File image = new File(this.getClass().getClassLoader().getResource("data\\" + name + ".jpeg").getFile());
             return ImageIO.read(image);
         } catch (IOException e) {
             return null;

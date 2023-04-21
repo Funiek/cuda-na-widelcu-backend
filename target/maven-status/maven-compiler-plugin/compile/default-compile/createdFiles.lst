@@ -1,11 +1,11 @@
 pl\ds360\cudanawidelcu\repositories\RecipeRepositoryImpl.class
+pl\ds360\cudanawidelcu\entities\Recipe.class
+pl\ds360\cudanawidelcu\interfaces\FileService.class
+pl\ds360\cudanawidelcu\interfaces\RecipeService.class
 pl\ds360\cudanawidelcu\services\FileServiceImpl.class
 pl\ds360\cudanawidelcu\resources\JakartaEE8Resource.class
-pl\ds360\cudanawidelcu\entities\Recipe.class
 pl\ds360\cudanawidelcu\entities\Product.class
-pl\ds360\cudanawidelcu\interfaces\FileService.class
 pl\ds360\cudanawidelcu\services\RecipeServiceImpl.class
-pl\ds360\cudanawidelcu\interfaces\RecipeService.class
 pl\ds360\cudanawidelcu\entities\Category.class
 pl\ds360\cudanawidelcu\JakartaRestConfiguration.class
 pl\ds360\cudanawidelcu\interfaces\RecipeRepository.class
