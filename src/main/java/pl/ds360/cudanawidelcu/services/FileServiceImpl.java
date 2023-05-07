@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.Files;
+import javax.jws.HandlerChain;
 import javax.xml.ws.BindingType;
 import javax.xml.ws.soap.MTOM;
 import javax.xml.ws.soap.SOAPBinding;
@@ -31,6 +32,7 @@ import javax.xml.ws.soap.SOAPBinding;
 @MTOM
 @WebService(serviceName = "FileService", endpointInterface = "pl.ds360.cudanawidelcu.interfaces.FileService")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
+@HandlerChain(file="handler-chain.xml")
 public class FileServiceImpl implements FileService {
 
     @Override
