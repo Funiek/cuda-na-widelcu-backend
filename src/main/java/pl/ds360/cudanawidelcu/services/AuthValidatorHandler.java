@@ -65,7 +65,7 @@ public class AuthValidatorHandler implements SOAPHandler<SOAPMessageContext>{
 	      }
 
 	       //if mac address is not match, throw exception
-	       if(!macValue.equals("KLIENT")){
+	       if(!macValue.equals("f0f8270db484173c2e0e52cb7fb0c8a53c2483c9cbb46bc0b88bead6c082cbf8")){
 	       	   generateSOAPErrMessage(soapMsg, "Invalid auth, access is denied.");
 	       }
 	            

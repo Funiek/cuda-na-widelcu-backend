@@ -32,7 +32,7 @@ import javax.xml.ws.soap.SOAPBinding;
 @MTOM
 @WebService(serviceName = "FileService", endpointInterface = "pl.ds360.cudanawidelcu.interfaces.FileService")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
-@HandlerChain(file="handler-chain.xml")
+//@HandlerChain(file="handler-chain.xml")
 public class FileServiceImpl implements FileService {
 
     @Override

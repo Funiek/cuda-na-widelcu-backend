@@ -26,7 +26,7 @@ import pl.ds360.cudanawidelcu.interfaces.FileService;
 @MTOM
 @WebService(serviceName = "RecipeService", endpointInterface = "pl.ds360.cudanawidelcu.interfaces.RecipeService")
 @BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
-@HandlerChain(file="handler-chain.xml")
+//@HandlerChain(file="handler-chain.xml")
 public class RecipeServiceImpl implements RecipeService {
     FileService imageService;
     RecipeRepository recipeRepository;
