@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.jws.WebService;
+import javax.xml.ws.BindingType;
+import javax.xml.ws.soap.MTOM;
+import javax.xml.ws.soap.SOAPBinding;
 import pl.ds360.cudanawidelcu.entities.Category;
 import pl.ds360.cudanawidelcu.entities.Recipe;
 import pl.ds360.cudanawidelcu.interfaces.RecipeRepository;
@@ -19,7 +22,9 @@ import pl.ds360.cudanawidelcu.interfaces.FileService;
  *
  * @author ZABA
  */
+@MTOM
 @WebService(serviceName = "RecipeService", endpointInterface = "pl.ds360.cudanawidelcu.interfaces.RecipeService")
+@BindingType(value = SOAPBinding.SOAP11HTTP_MTOM_BINDING)
 public class RecipeServiceImpl implements RecipeService {
     FileService imageService;
     RecipeRepository recipeRepository;

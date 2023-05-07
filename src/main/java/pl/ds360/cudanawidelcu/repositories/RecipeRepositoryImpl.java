@@ -26,7 +26,9 @@ public class RecipeRepositoryImpl implements RecipeRepository {
     public void init() {
         recipes = new ArrayList<>();
         
-        Recipe nalesniki = new Recipe(++this.nextRecipeId, "Nalesniki", "Dobre nalesniki", Category.BREAKFAST);
+        Recipe nalesniki = new Recipe(++this.nextRecipeId, "Nalesniki", "Ulubiony przepis czytelników! Dzięki dodatkowi wody gazowanej naleśniki są bardziej delikatne, ale oczywiście naleśniki wyjdą również ze zwykłą wodą.\n" +
+"\n" +
+"Jeśli mamy czas, ciasto można przygotować pół godziny wcześniej, aby odpoczęło, ale nie jest to konieczne i naleśniki można od razu smażyć po zmiksowaniu składników.", Category.BREAKFAST);
         
         nalesniki.addProduct(new Product("mleko", "szklanka", 1.25));
         nalesniki.addProduct(new Product("jajka", "ilosc", 2D));
@@ -34,19 +36,21 @@ public class RecipeRepositoryImpl implements RecipeRepository {
         recipes.add(this.nextRecipeId, nalesniki);
         
         
-        Recipe spaghetti = new Recipe(++this.nextRecipeId, "Spaghetti", "Spaghetti bez miesa ale dobre", Category.LUNCH);
+        Recipe spaghetti = new Recipe(++this.nextRecipeId, "Spaghetti", "Spaghetti bolognese to nie tylko niesamowicie pyszne, ale także łatwe do zrobienia danie! Niezależnie od tego, czy dopiero zaczynasz gotować, czy masz zaawansowane umiejętności, ta prosta wersja włoskiego klasyka z całą pewnością przypadnie Ci do gustu.", Category.LUNCH);
         
         spaghetti.addProduct(new Product("makaron", "kg", 0.5));
         spaghetti.addProduct(new Product("mieso mielone", "kg", 0.2));
         spaghetti.addProduct(new Product("ser", "kg", 0.2));
         recipes.add(this.nextRecipeId, spaghetti);
         
-        Recipe schabowe = new Recipe(++this.nextRecipeId, "Schabowe", "Schabowe jak u mamusi", Category.BREAKFAST);
+        Recipe schabowe = new Recipe(++this.nextRecipeId, "Schabowe", "Jaki powinien być kotlet schabowy? Powinien być cienki czy raczej gruby? Smażony na oleju roślinnym, maśle klarowanym czy na smalcu? Z kością czy bez niej? Jaki jest najbardziej klasyczny przepis na kotlet schabowy? Każdy robi go inaczej, ale mnie najbardziej smakuje ten, który jest po prostu wieprzową wersją sznycla wiedeńskiego, pozostającego wciąż najlepiej dopracowanym kotletem w panierce.\n" +
+"\n" +
+"Mój idealny kotlet jest cienki, z delikatną panierką odchodzącą od mięsa, tworzącą charakterystyczne duże purchle, równomiernie wysmażony, kolorem przypominający skrzypce Stradivariusa.", Category.BREAKFAST);
         
         schabowe.addProduct(new Product("piers z kurczaka", "ilosc", 2D));
         recipes.add(this.nextRecipeId, schabowe);
         
-        Recipe skry = new Recipe(++this.nextRecipeId, "Skyr", "Bialkowa moc", Category.DINNER);
+        Recipe skry = new Recipe(++this.nextRecipeId, "Skyr", "Skyr wymieszaj z jogurtem, masłem orzechowym, kakao, syropem klonowym i musli. Podziel na porcje, dodaj owoce. Mrożone wcześniej rozmroź – wyjmij je odpowiednio wcześniej z zamrażalnika albo wstaw na chwilę do mikrofalówki.", Category.DINNER);
         
         skry.addProduct(new Product("skyr", "ilosc", 1D));
         recipes.add(this.nextRecipeId, skry);
